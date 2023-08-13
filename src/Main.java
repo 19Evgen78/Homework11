@@ -49,26 +49,27 @@ public class Main {
 
         int deliveryDistance = 95;
         int numberDeliveryDay = 1;
-        int twoNumberDeliveryDay = numberDeliveryDay + 1;
-        int threeNumberDeliveryDay = twoNumberDeliveryDay + 1;
-        calculateDeliveryDays(deliveryDistance, numberDeliveryDay, twoNumberDeliveryDay,
-                threeNumberDeliveryDay);
+        calculateDeliveryDays(deliveryDistance, numberDeliveryDay);
+        String strOut = calculateDeliveryDays(deliveryDistance,numberDeliveryDay);
     }
 
-    public static int calculateDeliveryDays(int deliveryDistance, int numberDeliveryDay,
-                                            int twoNumberDeliveryDay, int threeNumberDeliveryDay) {
+    public static String calculateDeliveryDays(int deliveryDistance, int numberDeliveryDay) {
 
 
         if (deliveryDistance <= 20) {
-            return Integer.parseInt("Потребуется дней : " + numberDeliveryDay);
+            //System.out.println()
+        return "Потребуется дней : " + numberDeliveryDay;
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            return Integer.parseInt("Потребуется лней : " + twoNumberDeliveryDay);
+            //System.out.println()
+        return "Потребуется лней : " + (numberDeliveryDay + 1);
         } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            return Integer.parseInt("Потребуется дней : " + threeNumberDeliveryDay);
+            //System.out.println()
+        return "Потребуется дней : " + (numberDeliveryDay + 2);
         } else if (deliveryDistance > 100) {
-            return Integer.parseInt("Доставки нет");
-
+            //System.out.println()
+        return "Доставки нет";
         }
-        return deliveryDistance;
+        String strOut = null;
+        return null;
     }
 }
